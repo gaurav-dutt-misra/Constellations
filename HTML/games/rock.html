@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <script>
+        // alert("hello");
+        var x=0;
+        var y=0;
+        function play(z){
+            a=['Rock','Paper','Scissor'];
+            c=z.value;
+            b=a[Math.floor(Math.random() * a.length)];
+            // console.log(b)
+            
+            if(b==c){
+                x++;
+                y++;
+                document.getElementById('s1').innerHTML=x;
+                document.getElementById('s2').innerHTML=y;
+                document.getElementById('z1').innerHTML=b;
+                document.getElementById('z2').innerHTML=c;
+            }
+            else if(b=='Rock' && c=='Scissor'){
+                x++;
+                document.getElementById('s1').innerHTML=x;
+                document.getElementById('s2').innerHTML=y;
+                document.getElementById('z1').innerHTML=b;
+                document.getElementById('z2').innerHTML=c;
+            }
+            else if(b=='Scissor' && c=='Rock'){
+                y++;
+                document.getElementById('s1').innerHTML=x;
+                document.getElementById('s2').innerHTML=y;
+                document.getElementById('z1').innerHTML=b;
+                document.getElementById('z2').innerHTML=c;
+            }
+            else if(b=='Paper' && c=='Scissor'){
+                y++;
+                document.getElementById('s1').innerHTML=x;
+                document.getElementById('s2').innerHTML=y;
+                document.getElementById('z1').innerHTML=b;
+                document.getElementById('z2').innerHTML=c;
+            }
+            else if(b=='Rock' && c=='Paper'){
+                y++;
+                document.getElementById('s1').innerHTML=x;
+                document.getElementById('s2').innerHTML=y;
+                document.getElementById('z1').innerHTML=b;
+                document.getElementById('z2').innerHTML=c;
+            }
+            else if(b=='Scissor' && c=='Paper'){
+                x++;
+                document.getElementById('s1').innerHTML=x;
+                document.getElementById('s2').innerHTML=y;
+                document.getElementById('z1').innerHTML=b;
+                document.getElementById('z2').innerHTML=c;
+            }
+            else if(b=="Paper" && c=="Rock") {
+                x++;
+                document.getElementById('s1').innerHTML=x;
+                document.getElementById('s2').innerHTML=y;
+                document.getElementById('z1').innerHTML=b;
+                document.getElementById('z2').innerHTML=c;
+            }
+            if(x==10){
+                document.write("Computer Wins");
+            }
+            else if(y==10){
+                document.write("You Win");
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <div style="display: inline-block;margin: 10%;"><span style="color: rgb(21, 211, 31);font-size: 160%;">Computer Score-</span>
+        <span id="s1" style="font-size: 200%;"></span><br>
+        <span id="z1"></span>
+    </div >
+    <div style="display: inline-block; margin: 10%;"><span style="color: rgb(21, 211, 31);font-size: 160%;">Your Score-</span>
+        <span id="s2" style="font-size: 200%;"></span><br>
+        <span id="z2"></span>
+    </div>
+    <div style="display: block;margin-left:30%;">
+    <button type="button"  value="Rock" onclick="play(this)">Rock</button>
+    <button type="button"  value="Paper" onclick="play(this)">Paper</button>
+    <button type="button"  value="Scissor" onclick="play(this)">Scissor</button>
+    </div>
+    
+    
+</body>
+</html>

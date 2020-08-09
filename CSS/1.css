@@ -1,0 +1,33 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+nav{
+    
+    margin-top: 5%;
+    height: 70px;
+    width: 100%;
+    background-color:rgb(58, 59, 59);
+    border: black;
+    position: fixed;
+    display: block;
+}
+nav a{
+    float: left;;
+    margin: 1% 7% 0% 7% ;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+    background-color: rgb(255,255,255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    color: rgb(255, 0, 0);
+    border-radius: 7px;
+}
+nav a:hover{
+    background-color: rgba(76, 247, 76, 0.973);
+}
+nav a:active{
+    background-color: rgba(76, 247, 76, 0.973);
+}
+section{
+    box-shadow:10px 10px;
+}
